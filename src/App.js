@@ -1,11 +1,15 @@
-import React from 'react';
-// import Results from './components/results';
-import { Pace } from './components/pace';
+import React, { useState } from 'react';
+import Results from './feature/race-results/results';
+import { Pace } from './feature/calculate-pace';
 
 export const App = () => {
+  const [toggle, setToggle] = useState(true);
   return (
-    <div style={{ margin: 10 }}>
-      <Pace />
+    <div >
+      <button onClick={() => setToggle((prevState) => !prevState)}>{`Show ${
+        toggle ? 'Results' : 'Pace Calculator'
+      }`}</button>
+      <div>{toggle ? <Pace /> : <Results />}</div>
     </div>
   );
 };
