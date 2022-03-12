@@ -2,6 +2,7 @@ import React, { useContext, useCallback } from 'react';
 import { updateState } from './pace-reducer';
 import { CalculatePaceContext } from './pace-context-provider';
 import { InputAndLabel } from '../../components/input-and-label';
+import { Wrapper } from './pace-calculator.styles';
 
 export const Distance = () => {
   const {
@@ -15,14 +16,7 @@ export const Distance = () => {
   );
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        gap: 5,
-        padding: '5px 0px',
-      }}
-    >
+    <Wrapper>
       <InputAndLabel
         label="Distance"
         name="traveled"
@@ -35,6 +29,6 @@ export const Distance = () => {
         value={distance_units}
         onChange={updateValue}
       />
-    </div>
+    </Wrapper>
   );
 };

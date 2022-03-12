@@ -2,6 +2,7 @@ import React, { useContext, useCallback } from 'react';
 import { updateState } from './pace-reducer';
 import { CalculatePaceContext } from './pace-context-provider';
 import { InputAndLabel } from '../../components/input-and-label';
+import { Wrapper } from './pace-calculator.styles';
 
 export const Output = () => {
   const {
@@ -15,20 +16,13 @@ export const Output = () => {
   );
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        gap: 5,
-        padding: '5px 0px',
-      }}
-    >
+    <Wrapper>
       <InputAndLabel
         label="Pace Per"
         name="units"
         value={pace_units}
         onChange={updateValue}
       />
-    </div>
+    </Wrapper>
   );
 };

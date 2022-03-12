@@ -2,14 +2,15 @@ import React, { useState } from 'react';
 import Results from './feature/race-results/results';
 import { Pace } from './feature/calculate-pace';
 import styled from 'styled-components';
+import { theme } from './theme.styles';
 
 export const App = () => {
   const [toggle, setToggle] = useState(true);
   return (
     <Container>
-      <Button onClick={() => setToggle((prevState) => !prevState)}>{`Show ${
+      <ToggleButton onClick={() => setToggle((prevState) => !prevState)}>{`Show ${
         toggle ? 'Results' : 'Pace Calculator'
-      }`}</Button>
+      }`}</ToggleButton>
       <div style={{ textAlign: 'left' }}>{toggle ? <Pace /> : <Results />}</div>
     </Container>
   );
@@ -21,22 +22,26 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50vw;
+  width: 100vw;
 `;
 
 export const Button = styled.button`
-  background-color: hsla(217, 95%, 48%, 1);
-  background-color: transparent;
-  color: hsla(237, 51%, 91%, 1);
-  border: 1px solid hsla(217, 95%, 48%, 1);
-  font-size: 0.8rem;
+  ${theme.font.button};
+  background-color: ${theme.colors.primary};
+  color: ${theme.colors.lightest};
+  border: 1px solid ${theme.colors.primary};
+
   text-transform: uppercase;
-  height: 40px;
+  height: 50px;
   width: 200px;
   border-radius: 10px;
-  margin-bottom: 30px;
   &:hover {
-    background-color: hsla(212, 97%, 54%, 1);
+    background-color: ${theme.colors.primaryAlt};
     cursor: pointer;
   }
+`;
+
+export const ToggleButton = styled(Button)`
+  ${theme.font.toggleButton};
+  background-color: transparent;
 `;

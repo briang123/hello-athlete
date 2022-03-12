@@ -2,7 +2,7 @@ import React, { useContext, useCallback } from 'react';
 import { calculatePace } from 'athlete-calculations';
 import { updateResult } from './pace-reducer';
 import { CalculatePaceContext } from './pace-context-provider';
-import styled, { css } from 'styled-components';
+import { Button, Answer } from './pace-calculator.styles';
 
 export const Submit = () => {
   const {
@@ -52,45 +52,3 @@ export const Submit = () => {
     </>
   );
 };
-
-export const Button = styled.button`
-  background-color: hsla(217, 95%, 48%, 1);
-  color: hsla(237, 51%, 91%, 1);
-  border: 1px solid hsla(217, 95%, 48%, 1);
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  height: 50px;
-  width: 200px;
-  border-radius: 10px;
-  &:hover {
-    background-color: hsla(212, 97%, 54%, 1);
-    cursor: pointer;
-  }
-`;
-
-const linearGradientCss = () => css`
-  border-radius: var(--radius);
-  font-style: normal;
-  font-weight: 600;
-  font-size: var(--baseFontSize);
-  line-height: 19px;
-  text-align: center;
-  cursor: pointer;
-  color: var(--lightTextColor);
-  border-style: none;
-  padding: var(--padding-sm);
-  background: var(--linear-gradient-1);
-  margin: 5px 0px;
-`;
-
-export const Answer = styled.pre`
-  background: linear-gradient(
-    114.08deg,
-    hsla(282, 71%, 45%, 1) 7.95%,
-    hsla(217, 95%, 48%, 1) 90.87%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-`;

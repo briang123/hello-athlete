@@ -2,6 +2,7 @@ import React, { useContext, useCallback } from 'react';
 import { updateState } from './pace-reducer';
 import { CalculatePaceContext } from './pace-context-provider';
 import { InputAndLabel } from '../../components/input-and-label';
+import { Wrapper } from './pace-calculator.styles';
 
 export const Time = () => {
   const {
@@ -15,14 +16,7 @@ export const Time = () => {
   );
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        gap: 5,
-        padding: '5px 0px',
-      }}
-    >
+    <Wrapper>
       <InputAndLabel
         label="Days"
         name="days"
@@ -47,6 +41,6 @@ export const Time = () => {
         value={time_seconds}
         onChange={updateValue}
       />
-    </div>
+    </Wrapper>
   );
 };
