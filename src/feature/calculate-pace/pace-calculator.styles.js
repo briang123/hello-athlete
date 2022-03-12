@@ -9,8 +9,10 @@ export const Button = styled.button`
 
   text-transform: uppercase;
   height: 50px;
-  width: 200px;
+  width: 250px;
   border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
   &:hover {
     background-color: ${theme.colors.primaryAlt};
     cursor: pointer;

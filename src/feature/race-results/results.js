@@ -47,6 +47,10 @@ export const Results = () => {
     9: `var(--pink)`,
   };
 
+  React.useEffect(() => {
+    document.title = 'Sample Results - Athlete Calculations';
+  }, []);
+
   return (
     <Table>
       <Header />

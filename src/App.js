@@ -6,11 +6,12 @@ import { theme } from './theme.styles';
 
 export const App = () => {
   const [toggle, setToggle] = useState(true);
+
   return (
     <Container>
-      <ToggleButton onClick={() => setToggle((prevState) => !prevState)}>{`Show ${
-        toggle ? 'Results' : 'Pace Calculator'
-      }`}</ToggleButton>
+      <ToggleButton
+        onClick={() => setToggle((prevState) => !prevState)}
+      >{`Show ${toggle ? 'Results' : 'Pace Calculator'}`}</ToggleButton>
       <div style={{ textAlign: 'left' }}>{toggle ? <Pace /> : <Results />}</div>
     </Container>
   );

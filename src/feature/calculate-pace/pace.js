@@ -4,11 +4,15 @@ import { Output } from './output';
 import { Distance } from './distance';
 import { Time } from './time';
 import { Submit } from './submit';
-import { theme } from './../../theme.styles'
+import { theme } from './../../theme.styles';
 export const Pace = () => {
+  React.useEffect(() => {
+    document.title = 'Pace Chart - Athlete Calculations';
+  }, []);
   return (
     <PaceContextProvider>
       <div
+        // autoComplete="off"
         style={{
           width: '50vw',
           backgroundColor: theme.colors.black1,

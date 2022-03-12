@@ -7,7 +7,7 @@ export const theme = {
     light: `var(--light)`,
     success: `var(--success)`,
     primary: `var(--primary)`,
-    primaryAlt: `var(--primary-alt)`,
+    primaryAlt: `var(--primaryAlt)`,
   },
   font: {
     header: `font-family: var(--font-family); font-size: 1.4rem; font-weight: bold`,

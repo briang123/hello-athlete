@@ -45,7 +45,7 @@ export const Submit = () => {
     <>
       <div>
         <Button name="results" onClick={() => handleSubmit()}>
-          Submit
+          Calculate Pace
         </Button>
       </div>
       {pace_results && <Answer>{JSON.stringify(pace_results, null, 2)}</Answer>}
