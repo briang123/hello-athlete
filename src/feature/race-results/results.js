@@ -65,6 +65,6 @@ export const Table = styled.div`
   display: flex;
   flex-direction: column;
   font-size: 1.3rem;
-  margin: 0 10px;
+  margin: 0 10px 30px;
   gap: 5px;
 `;
