@@ -10,10 +10,11 @@ export const theme = {
     primaryAlt: `hsla(212, 97%, 54%, 1)`,
   },
   font: {
-    toggleButton: `font-family: Inter, san-serif; font-size: 0.8rem; text-transform: uppercase;`,
-    header: `font-family: Inter, san-serif; font-size: 1.4rem; font-weight: bold`,
-    body: `font-family: Inter, san-serif; font-size: 1.2rem;`,
-    button: `font-family: Inter, san-serif; font-size: 1.2rem;`,
+    header: `font-family: var(--font-family); font-size: 1.4rem; font-weight: bold`,
+    button: `font-family: var(--font-family); font-size: 1.2rem;`,
+    toggleButton: `font-family: var(--font-family); font-size: 0.8rem; text-transform: uppercase;`,
+    body: `font-family: var(--font-family); font-size: 1.2rem;`,
+    label: `font-family: var(--font-family); font-size: .6rem; letter-spacing: 0.08rem; font-weight: bold;`,
   },
   gradient: {
     color1: `background: linear-gradient(

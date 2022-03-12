@@ -45,5 +45,6 @@ export const HeaderRow = styled(Row)`
 `;
 
 export const HighlightedCell = styled(Cell)`
-  color: ${theme.colors.success};
+  font-weight: bold;
+  ${theme.gradient.color1};
 `;
