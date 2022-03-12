@@ -1,13 +1,13 @@
 export const theme = {
   colors: {
-    black1: `hsla(232, 30%, 15%, 1.0)`,
-    black2: `hsla(235, 26%, 16%, 1.0)`,
-    black3: `hsla(235, 24%, 21%, 1.0)`,
-    lightest: `hsla(237, 51%, 91%, 1)`,
-    light: `hsla(231, 29%, 82%, 1)`,
-    success: `hsla(143, 100%, 41%, 1)`,
-    primary: `hsla(217, 95%, 48%, 1)`,
-    primaryAlt: `hsla(212, 97%, 54%, 1)`,
+    black1: `var(--black1)`,
+    black2: `var(--black2)`,
+    black3: `var(--black3)`,
+    lightest: `var(--lightest)`,
+    light: `var(--light)`,
+    success: `var(--success)`,
+    primary: `var(--primary)`,
+    primaryAlt: `var(--primary-alt)`,
   },
   font: {
     header: `font-family: var(--font-family); font-size: 1.4rem; font-weight: bold`,
@@ -19,12 +19,17 @@ export const theme = {
   gradient: {
     color1: `background: linear-gradient(
       114.08deg,
-      hsla(282, 71%, 45%, 1) 7.95%,
-      hsla(217, 95%, 48%, 1) 90.87%
+      var(--pink) 7.95%,
+      var(--primary) 90.87%
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;`,
+    color2: `background-image:linear-gradient(to right, var(--primary) 20.06%, var(--pink) 65.93%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent`,
   },
 };

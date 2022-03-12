@@ -7,18 +7,18 @@ export const Header = () => {
       <Cell width={`20%`}>Bib</Cell>
       <Cell width={`40%`}>Name</Cell>
       <Cell width={`20%`}>Results</Cell>
-      <HighlightedCell width={`20%`}>Pace</HighlightedCell>
+      <Cell width={`150px`}>Pace</Cell>
     </HeaderRow>
   );
 };
 
-export const RaceResult = ({ index, bib, name, results, pace }) => {
+export const RaceResult = ({ index, bib, name, results, pace, paceColor }) => {
   return (
     <Row index={index}>
       <Cell width={`20%`}>{bib}</Cell>
       <Cell width={`40%`}>{name}</Cell>
       <Cell width={`20%`}>{results}</Cell>
-      <HighlightedCell width={`20%`}>{pace}</HighlightedCell>
+      <HighlightedCell bgColor={paceColor} width={`20%`}>{pace}</HighlightedCell>
     </Row>
   );
 };

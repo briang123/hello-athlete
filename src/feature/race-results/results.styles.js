@@ -44,7 +44,18 @@ export const HeaderRow = styled(Row)`
   }
 `;
 
-export const HighlightedCell = styled(Cell)`
+export const GradientText = styled(Cell)`
   font-weight: bold;
-  ${theme.gradient.color1};
+  ${theme.gradient.color2};
+`;
+
+export const HighlightedCell = styled(Cell)`
+  ${({ bgColor }) => css`
+    font-weight: bold;
+    border-radius: 8px;
+    background-color: var(--primary);
+    background-color: ${bgColor};
+    width: 150px;
+    padding: 4px 8px;
+  `}
 `;

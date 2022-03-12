@@ -12,6 +12,10 @@ export const Results = () => {
 
   function pace() {
     return {
+      paceColor: (pace, colors) => {
+        const minute = pace.charAt(0);
+        return colors[minute];
+      },
       processResults: (data) =>
         data.map((resultItem) => {
           const { distance, units, hours, minutes, seconds } = resultItem;
@@ -36,6 +40,13 @@ export const Results = () => {
   const fakeResults = faker.fetch();
   const p = pace();
 
+  const paceColorMapping = {
+    6: `var(--success)`,
+    7: `var(--warning)`,
+    8: `var(--danger)`,
+    9: `var(--pink)`,
+  };
+
   return (
     <Table>
       <Header />
@@ -49,6 +60,7 @@ export const Results = () => {
             name={name}
             results={results}
             pace={pace}
+            paceColor={p.paceColor(pace, paceColorMapping)}
           />
         ))}
     </Table>
