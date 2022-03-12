@@ -34,13 +34,14 @@ export const Row = styled.div`
   border-radius: 15px;
 
   ${({ index }) => css`
-    background-color: ${index % 2 
+    background-color: ${index % 2
       ? 'hsla(235, 24%, 21%, 1.0)'
       : 'hsla(235, 26%, 16%, 1.0)'};
   `}
 `;
 
 export const Cell = styled.div`
+  font-family: Inter, san-serif;
   color: hsla(231, 29%, 82%, 1);
   box-sizing: border-box;
   ${({ width }) => css`

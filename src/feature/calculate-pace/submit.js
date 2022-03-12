@@ -44,16 +44,16 @@ export const Submit = () => {
   return (
     <>
       <div>
-        <SubmitButton name="results" onClick={() => handleSubmit()}>
+        <Button name="results" onClick={() => handleSubmit()}>
           Submit
-        </SubmitButton>
+        </Button>
       </div>
       {pace_results && <pre>{JSON.stringify(pace_results, null, 2)}</pre>}
     </>
   );
 };
 
-export const SubmitButton = styled.button`
+export const Button = styled.button`
   background-color: hsla(217, 95%, 48%, 1);
   color: hsla(237, 51%, 91%, 1);
   border: 1px solid hsla(217, 95%, 48%, 1);
