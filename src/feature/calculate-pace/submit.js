@@ -2,6 +2,7 @@ import React, { useContext, useCallback } from 'react';
 import { calculatePace } from 'athlete-calculations';
 import { updateResult } from './pace-reducer';
 import { CalculatePaceContext } from './pace-context-provider';
+import styled from 'styled-components';
 
 export const Submit = () => {
   const {
@@ -43,11 +44,26 @@ export const Submit = () => {
   return (
     <>
       <div>
-        <button name="results" onClick={() => handleSubmit()}>
+        <SubmitButton name="results" onClick={() => handleSubmit()}>
           Submit
-        </button>
+        </SubmitButton>
       </div>
       {pace_results && <pre>{JSON.stringify(pace_results, null, 2)}</pre>}
     </>
   );
 };
+
+export const SubmitButton = styled.button`
+  background-color: hsla(217, 95%, 48%, 1);
+  color: hsla(237, 51%, 91%, 1);
+  border: 1px solid hsla(217, 95%, 48%, 1);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  height: 50px;
+  width: 200px;
+  border-radius: 10px;
+  &:hover {
+    background-color: hsla(212, 97%, 54%, 1);
+    cursor: pointer;
+  }
+`;

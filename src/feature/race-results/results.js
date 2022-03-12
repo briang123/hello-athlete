@@ -64,8 +64,6 @@ export const Table = styled.div`
   overflow: scroll;
   display: flex;
   flex-direction: column;
-  /* align-content: flex-start; */
-  /* align-items: flex-start; */
   font-size: 1.3rem;
   margin: 0 10px;
   gap: 5px;
