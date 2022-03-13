@@ -8,6 +8,7 @@ export const InputAndLabel = ({
   onChange,
   defaultValue,
 }) => {
+  console.log('input', { label, name, value, defaultValue });
   return (
     <Wrapper>
       <Label>{label}</Label>

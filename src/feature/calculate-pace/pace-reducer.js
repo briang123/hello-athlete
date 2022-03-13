@@ -23,7 +23,16 @@ export const paceReducer = (state, action) => {
     type,
   } = action;
   const currState = buildKeyValue(object, name, value);
+
+  console.log('reducer', state, action);
+  
   switch (type) {
+    case 'MIN_SEC_CHANGE':
+      return {
+        ...state,
+        ...buildKeyValue('time', 'minutes', value.split(':')[0]),
+        ...buildKeyValue('time', 'seconds', value.split(':')[1]),
+      };
     case 'VALUE_CHANGE':
       return {
         ...state,

@@ -3,6 +3,7 @@ import Results from './feature/race-results/results';
 import { Pace } from './feature/calculate-pace';
 import styled from 'styled-components';
 import { theme } from './theme.styles';
+// import { MotionSlider } from './components/motion-slider';
 
 export const App = () => {
   const [toggle, setToggle] = useState(true);
@@ -46,3 +47,25 @@ export const ToggleButton = styled(Button)`
   ${theme.font.toggleButton};
   background-color: transparent;
 `;
+
+// const MotionSliderContent = () => {
+//   const minValue = 200;
+//   const maxValue = 400;
+//   const [sliderMin, setSliderMin] = useState(minValue);
+//   const [sliderMax, setSliderMax] = useState(maxValue);
+
+//   return (
+//     <div>
+//       <Slider
+//         defaultMinBudget={minValue}
+//         defaultMaxBudget={maxValue}
+//         label={'Slider!'}
+//         max={400}
+//         setSliderMin={setSliderMin}
+//         setSliderMax={setSliderMax}
+//       />
+//       <input type="hidden" name={'minBudget'} defaultValue={sliderMin} />
+//       <input type="hidden" name={'maxBudget'} defaultValue={sliderMax} />
+//     </div>
+//   );
+// };
