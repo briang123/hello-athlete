@@ -28,6 +28,9 @@ const StyledThumb = styled.div`
 `;
 
 const Thumb = (props, { valueNow }) => {
+
+  // const totalMinutes = hours * MINUTES_PER_HOUR + minutes * 1 + seconds / SECONDS_PER_MINUTE
+
   const _minutes = Math.floor(valueNow / 60);
   const minutes = _minutes.toFixed(0);
   const _seconds = valueNow % 60;
