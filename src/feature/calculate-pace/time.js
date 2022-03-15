@@ -40,7 +40,10 @@ export const Time = () => {
           label="Days"
           fontColor="var(--lightest)"
           checked={showDays}
-          onChange={setShowDays}
+          onChange={(value) => {
+            if (value) setShowHours(value);
+            setShowDays(value)
+          }}
         />
         <Switch
           width={50}
