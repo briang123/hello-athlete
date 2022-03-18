@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import { theme } from './../../theme.styles';
 
 export const Button = styled.button`
@@ -30,4 +31,22 @@ export const Wrapper = styled.div`
 
 export const Answer = styled.pre`
   ${theme.gradient.color1}
+`;
+
+
+export const ResultsWrapper = styled.div`
+  background: ${theme.colors.black3};
+  border-radius: 10px;
+  font-size: 4rem;
+  padding: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+`;
+
+export const Units = styled.div`
+  font-size: 1rem;
 `;

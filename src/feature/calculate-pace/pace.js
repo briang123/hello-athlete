@@ -1,5 +1,6 @@
 import React from 'react';
 import { PaceContextProvider } from './pace-context-provider';
+import { Answer } from './answer';
 import { Output } from './output';
 import { Distance } from './distance';
 import { Time } from './time';
@@ -22,6 +23,7 @@ export const Pace = () => {
           alignItems: 'center',
         }}
       >
+        <Answer />
         <Time />
         <Distance />
         <Output />

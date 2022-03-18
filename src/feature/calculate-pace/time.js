@@ -58,6 +58,7 @@ export const Time = () => {
           }}
         />
       </ToggleContainer>
+      
       <SliderContainer>
         <SliderContent onChange={updateValueFromSlider} />
       </SliderContainer>
