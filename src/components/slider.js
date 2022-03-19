@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactSlider from 'react-slider';
 import styled from 'styled-components';
-
+import { theme } from './../theme.styles';
 const StyledSlider = styled(ReactSlider)`
   width: 100%;
   height: 35px;
@@ -21,6 +21,7 @@ const StyledThumb = styled.div`
   font-family: var(--font-family);
   font-size: 1.2rem;
   font-weight: bold;
+  border: 3px solid ${theme.colors.light};
   cursor: grab;
   &:focus {
     outline: none;

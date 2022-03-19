@@ -3,7 +3,7 @@ import { calculatePace, fake5kRaceResults } from 'athlete-calculations';
 import { RaceResult, Header } from './race-result';
 import { Table } from './results.styles';
 
-export const Results = () => {
+export const Results = ({title}) => {
   function fakeData() {
     return {
       fetch: () => fake5kRaceResults,
@@ -48,8 +48,8 @@ export const Results = () => {
   };
 
   React.useEffect(() => {
-    document.title = 'Sample Results - Athlete Calculations';
-  }, []);
+    document.title = title;
+  }, [title]);
 
   return (
     <Table>

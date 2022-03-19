@@ -6,10 +6,10 @@ import { Distance } from './distance';
 import { Time } from './time';
 import { Submit } from './submit';
 import { theme } from './../../theme.styles';
-export const Pace = () => {
+export const Pace = ({title}) => {
   React.useEffect(() => {
-    document.title = 'Pace Chart - Athlete Calculations';
-  }, []);
+    document.title = title;
+  }, [title]);
   return (
     <PaceContextProvider>
       <div

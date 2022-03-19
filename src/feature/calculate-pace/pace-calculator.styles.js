@@ -33,20 +33,23 @@ export const Answer = styled.pre`
   ${theme.gradient.color1}
 `;
 
-
-export const ResultsWrapper = styled.div`
-  background: ${theme.colors.black3};
-  border-radius: 10px;
+export const TextGradientWrapper = styled.div`
+  ${theme.gradient.color1}
   font-size: 4rem;
-  padding: 15px;
-  width: 100%;
+  font-weight: bold;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
+`;
+
+export const ResultsWrapper = styled.div`
+  background: ${theme.colors.black3};
+  border-radius: 10px;
+  padding: 15px;
+  width: 100%;
 `;
 
 export const Units = styled.div`
-  font-size: 1rem;
+  font-size: 1.5rem;
 `;

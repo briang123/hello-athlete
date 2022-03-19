@@ -13,7 +13,13 @@ export const App = () => {
       <ToggleButton
         onClick={() => setToggle((prevState) => !prevState)}
       >{`Show ${toggle ? 'Results' : 'Pace Calculator'}`}</ToggleButton>
-      <div style={{ textAlign: 'left' }}>{toggle ? <Pace /> : <Results />}</div>
+      <div style={{ textAlign: 'left' }}>
+        {toggle ? (
+          <Pace title="Pace Chart - Athlete Calculations" />
+        ) : (
+          <Results title="Sample Results - Athlete Calculations" />
+        )}
+      </div>
     </Container>
   );
 };

@@ -1,6 +1,11 @@
 import React, { useContext } from 'react';
 import { CalculatePaceContext } from './pace-context-provider';
-import { Wrapper, ResultsWrapper, Units } from './pace-calculator.styles';
+import {
+  Wrapper,
+  ResultsWrapper,
+  TextGradientWrapper,
+  Units,
+} from './pace-calculator.styles';
 
 export const Answer = () => {
   const {
@@ -10,8 +15,10 @@ export const Answer = () => {
   return (
     <Wrapper>
       <ResultsWrapper>
-        {pace_results?.pace?.formatted}
-        <Units>minutes/mile</Units>
+        <TextGradientWrapper>
+          {pace_results?.pace?.formatted ?? '0:00'}
+          <Units>minutes/mile</Units>
+        </TextGradientWrapper>
       </ResultsWrapper>
     </Wrapper>
   );
