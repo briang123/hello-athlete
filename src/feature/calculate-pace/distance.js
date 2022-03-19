@@ -20,12 +20,14 @@ export const Distance = () => {
       <InputAndLabel
         label="Distance"
         name="traveled"
+        width="175px"
         value={distance_traveled}
         onChange={updateValue}
       />
       <InputAndLabel
         label="Units"
         name="units"
+        width="175px"
         value={distance_units}
         onChange={updateValue}
       />

@@ -1,5 +1,6 @@
 import React, { useContext, useCallback, useState } from 'react';
-import { updateState } from './pace-reducer';
+import { updateState, updateResult } from './pace-reducer';
+import { calculatePace } from 'athlete-calculations';
 import { CalculatePaceContext } from './pace-context-provider';
 import { InputAndLabel } from '../../components/input-and-label';
 import { Slider } from '../../components/slider';
@@ -8,18 +9,42 @@ import styled from 'styled-components';
 import { Switch } from '../../components/switch';
 export const Time = () => {
   const {
-    state: { time_days, time_hours, time_minutes, time_seconds },
+    state: { time_days, time_hours, time_minutes, time_seconds, distance_traveled, distance_units, pace_units },
     dispatch,
   } = useContext(CalculatePaceContext);
 
   const [showDays, setShowDays] = useState(true);
   const [showHours, setShowHours] = useState(true);
 
+
   const updateValue = useCallback(
     (e) => updateState(e, 'time', dispatch),
     [dispatch],
   );
 
+//   const updatePace = useCallback(
+//     (results) => updateResult(results, 'pace', dispatch),
+//     [dispatch],
+//   );
+
+
+//   const handleSubmit = () => {
+//     const params = {
+//       distance: { traveled: distance_traveled, units: distance_units },
+//       time: {
+//         days: time_days,
+//         hours: time_hours,
+//         minutes: time_minutes,
+//         seconds: time_seconds,
+//         units: pace_units,
+//       },
+//       format: '%M:%SS',
+//     };
+// console.log('handleSubmit', params)
+//     const results = calculatePace(params);
+//     return updatePace(results);
+//   };
+  
   const updateValueFromSlider = useCallback(
     (value) => {
       dispatch({

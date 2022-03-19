@@ -20,6 +20,7 @@ export const Output = () => {
       <InputAndLabel
         label="Pace Per"
         name="units"
+        width="175px"
         value={pace_units}
         onChange={updateValue}
       />
